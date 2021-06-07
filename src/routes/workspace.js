@@ -3,6 +3,8 @@ import WorkspacesController from '../controllers/workspace.js';
 
 const router = express.Router();
 
+router.get('/', WorkspacesController.getAll);
+
 router.get('/:id', WorkspacesController.get);
 
 router.post('/', WorkspacesController.create);

@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.13"
+    "mongoose": "^5.12.13",
+    "node-cron": "^3.0.0",
+    "ping": "^0.4.1"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
