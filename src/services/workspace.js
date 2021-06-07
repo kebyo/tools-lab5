@@ -11,6 +11,10 @@ export default class WorkspaceService {
         return Workspace.findById(id);
     }
 
+    static async findAll() {
+        return Workspace.find();
+    }
+
     static async remove(id) {
         return Workspace.findOneAndDelete({_id: id});
     }

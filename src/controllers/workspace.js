@@ -8,6 +8,7 @@ export default class WorkspaceController {
             workspace,
         })
     }
+
     static async get(req, res) {
         const workspace = await WorkspaceService.findById(req.params.id);
 
@@ -15,6 +16,15 @@ export default class WorkspaceController {
             workspace,
         })
     }
+
+    static async getAll(req, res) {
+        const workspaces = await WorkspaceService.findAll();
+
+        return res.json({
+            workspaces,
+        })
+    }
+
     static async update(req, res) {
         const workspace = await WorkspaceService.update(req.params.id, req.body.workspace);
 
@@ -22,6 +32,7 @@ export default class WorkspaceController {
             workspace,
         })
     }
+
     static async remove(req, res) {
         const workspace = WorkspaceService.remove(req.params.id);
 
