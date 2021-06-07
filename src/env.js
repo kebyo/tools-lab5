@@ -10,4 +10,5 @@ dotenv.config({ path: path.join(__dirname, '../.env') });
 export default {
     port: process.env.PORT,
     dbUrl: process.env.DB_URL,
+    pingSchedule: process.env.SCHEDULE,
 }
